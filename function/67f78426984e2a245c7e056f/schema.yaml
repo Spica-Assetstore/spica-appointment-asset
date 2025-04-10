@@ -1,0 +1,16 @@
+_id: 67f78426984e2a245c7e056f
+name: Appointment Authorization
+language: javascript
+timeout: 25
+memoryLimit: 100
+triggers:
+  register:
+    type: http
+    active: true
+    options:
+      method: Post
+      path: /register
+      preflight: true
+env_vars:
+  - 67f784a68898bf24fe720f33
+  - 67f7848c23f4a824b94f7ab1

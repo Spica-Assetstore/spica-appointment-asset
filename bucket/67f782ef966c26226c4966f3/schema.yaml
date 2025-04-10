@@ -1,0 +1,154 @@
+_id: 67f782ef966c26226c4966f3
+title: Employee
+description: Describe your new bucket
+icon: badge
+primary: name
+readOnly: false
+history: false
+properties:
+  username:
+    type: string
+    title: username
+    description: Description of the username input
+    options:
+      position: bottom
+  identity_id:
+    type: string
+    title: identity_id
+    description: Description of the identity_id input
+    options:
+      position: bottom
+  name:
+    type: string
+    title: name
+    description: Description of the name input
+    options:
+      position: bottom
+  surname:
+    type: string
+    title: surname
+    description: Description of the surname input
+    options:
+      position: bottom
+  picture:
+    type: storage
+    title: picture
+    description: Description of the picture input
+    options:
+      position: bottom
+  appointments:
+    type: relation
+    title: appointments
+    description: Description of the appointments input
+    options:
+      position: bottom
+    relationType: onetomany
+    dependent: false
+    primary: client_status
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-appointment-bucket
+  services:
+    type: relation
+    title: services
+    description: Description of the services input
+    options:
+      position: bottom
+    relationType: onetomany
+    dependent: false
+    primary: name
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-service-bucket
+  working_hours:
+    type: array
+    title: working_hours
+    description: Description of the working_hours input
+    options:
+      position: bottom
+    items:
+      title: Title of the items
+      type: object
+      properties:
+        day_of_week:
+          type: number
+          title: day_of_week
+          description: Description of the day_of_week input
+          options:
+            position: bottom
+          enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+        hours:
+          type: array
+          title: hours
+          description: Description of the hours input
+          options:
+            position: bottom
+          items:
+            title: Title of the items
+            type: object
+            properties:
+              from:
+                type: string
+                title: from
+                description: Description of the from input
+                options:
+                  position: bottom
+              until:
+                type: string
+                title: until
+                description: Description of the until input
+                options:
+                  position: bottom
+  current_branch:
+    type: relation
+    title: current_branch
+    description: Description of the current_branch input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    primary: name
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-branch-bucket
+  average_rating:
+    type: number
+    title: average_rating
+    description: Description of the average_rating input
+    options:
+      position: bottom
+    minimum: 0
+    maximum: 5
+  busy_hours:
+    type: array
+    title: busy_hours
+    description: Description of the busy_hours input
+    options:
+      position: bottom
+    items:
+      title: Title of the items
+      type: object
+      properties:
+        from:
+          type: date
+          title: from
+          description: Description of the from input
+          options:
+            position: bottom
+        until:
+          type: date
+          title: until
+          description: Description of the until input
+          options:
+            position: bottom
+acl:
+  write: true==true
+  read: true==true
+order: 2

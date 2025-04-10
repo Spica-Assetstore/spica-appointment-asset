@@ -1,0 +1,59 @@
+_id: 67f782b14be1df22124b18bb
+title: Client
+description: Describe your new bucket
+icon: account_circle
+primary: name
+readOnly: false
+history: false
+properties:
+  name:
+    type: string
+    title: name
+    description: Description of the name input
+    options:
+      position: bottom
+  surname:
+    type: string
+    title: surname
+    description: Description of the surname input
+    options:
+      position: bottom
+  identity_id:
+    type: string
+    title: identity_id
+    description: Description of the identity_id input
+    options:
+      position: bottom
+  phone:
+    type: string
+    title: phone
+    description: Description of the phone input
+    options:
+      position: bottom
+  email:
+    type: string
+    title: email
+    description: Description of the email input
+    options:
+      position: bottom
+  date_of_birth:
+    type: date
+    title: date_of_birth
+    description: Description of the date_of_birth input
+    options:
+      position: bottom
+  appointments:
+    type: relation
+    title: appointments
+    description: Description of the appointments input
+    options:
+      position: bottom
+    relationType: onetomany
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-appointment-bucket
+acl:
+  write: true==true
+  read: true==true
+order: 0

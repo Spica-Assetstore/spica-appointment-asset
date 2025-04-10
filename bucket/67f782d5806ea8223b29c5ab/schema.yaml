@@ -1,0 +1,139 @@
+_id: 67f782d5806ea8223b29c5ab
+title: Appointment
+description: |-
+  employee_status
+  0 = Pending
+  -1 = Rejected
+  1 = Accepted
+
+  client_status
+  0 = Waiting
+  1 = Joined
+  -1 = Did Not Join
+icon: today
+primary: client_status
+readOnly: false
+history: false
+properties:
+  client:
+    type: relation
+    title: client
+    description: Description of the client input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-client-bucket
+  from:
+    type: date
+    title: from
+    description: Description of the from input
+    options:
+      position: bottom
+  until:
+    type: date
+    title: until
+    description: Description of the until input
+    options:
+      position: bottom
+  created_at:
+    type: date
+    title: created_at
+    description: Description of the created_at input
+    options:
+      position: bottom
+    default: :created_at
+  note:
+    type: textarea
+    title: note
+    description: Description of the note input
+    options:
+      position: bottom
+  last_update:
+    type: date
+    title: last_update
+    description: Description of the last_update input
+    options:
+      position: bottom
+    default: :updated_at
+  client_status:
+    type: number
+    title: client_status
+    description: |-
+      0 = Waiting
+      1 = Joined
+      -1 = Did Not Join
+
+      Default: 0
+    options:
+      position: bottom
+    default: 0
+    enum:
+      - -1
+      - 0
+      - 1
+  employee_status:
+    type: number
+    title: employee_status
+    description: |-
+      employee_status
+      0 = Pending
+      -1 = Rejected
+      1 = Accepted
+    options:
+      position: bottom
+    default: 0
+    enum:
+      - -1
+      - 0
+      - 1
+  employee:
+    type: relation
+    title: employee
+    description: Description of the employee input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-employee-bucket
+  service:
+    type: relation
+    title: service
+    description: Description of the service input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-service-bucket
+  branch:
+    type: relation
+    title: branch
+    description: Description of the branch input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-branch-bucket
+  rating:
+    type: relation
+    title: rating
+    description: Description of the rating input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-rating-bucket
+acl:
+  write: true==true
+  read: true==true
+order: 1

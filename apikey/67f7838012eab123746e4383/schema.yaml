@@ -1,0 +1,8 @@
+_id: 67f7838012eab123746e4383
+name: Secret Api Key For Appointment
+active: true
+key: 135jfd714m9b3wdsv
+policies:
+  - BucketFullAccess
+  - FunctionFullAccess
+  - IdentityFullAccess

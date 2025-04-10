@@ -1,0 +1,13 @@
+_id: 67f783bd701f8723d7c9e5ec
+name: Appointment
+language: javascript
+timeout: 5
+memoryLimit: 100
+triggers:
+  onRatingUpdate:
+    options:
+      bucket: 67f7833099cc8c22e3639ae8
+      type: INSERT
+    type: bucket
+    active: true
+env_vars: []

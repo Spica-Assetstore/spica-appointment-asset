@@ -1,0 +1,41 @@
+_id: 67f7833099cc8c22e3639ae8
+title: Rating
+description: Describe your new bucket
+icon: star
+primary: comment
+readOnly: false
+history: false
+properties:
+  star:
+    type: number
+    title: star
+    description: Description of the star input
+    options:
+      position: bottom
+    enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+  comment:
+    type: textarea
+    title: comment
+    description: Description of the comment input
+    options:
+      position: bottom
+  appointment:
+    type: relation
+    title: appointment
+    description: Description of the appointment input
+    options:
+      position: bottom
+    relationType: onetoone
+    dependent: false
+    bucket:
+      resourceFieldRef:
+        schemaName: spica-appointment-asset-appointment-bucket
+acl:
+  write: true==true
+  read: true==true
+order: 4

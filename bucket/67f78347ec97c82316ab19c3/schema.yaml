@@ -74,9 +74,8 @@ properties:
       position: bottom
     relationType: onetomany
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-employee-bucket
+    bucketId: 67f782ef966c26226c4966f3
+    primary:name
 acl:
   write: true==true
   read: true==true

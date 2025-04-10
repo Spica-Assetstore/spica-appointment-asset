@@ -23,9 +23,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-client-bucket
+    bucketId: 67f782b14be1df22124b18bb
+    primary: name
   from:
     type: date
     title: from
@@ -97,9 +96,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-employee-bucket
+    bucketId: 67f782ef966c26226c4966f3
+    primary: name
   service:
     type: relation
     title: service
@@ -108,9 +106,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-service-bucket
+    bucketId: 67f78317f2d5fa229c48a808
+    primary: name
   branch:
     type: relation
     title: branch
@@ -119,9 +116,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-branch-bucket
+    bucketId: 67f78347ec97c82316ab19c3
+    primary: name
   rating:
     type: relation
     title: rating
@@ -130,9 +126,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-rating-bucket
+    bucketId: 67f7833099cc8c22e3639ae8
+    primary: comment
 acl:
   write: true==true
   read: true==true

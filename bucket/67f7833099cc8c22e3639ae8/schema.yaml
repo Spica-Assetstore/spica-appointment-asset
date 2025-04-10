@@ -32,9 +32,8 @@ properties:
       position: bottom
     relationType: onetoone
     dependent: false
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-appointment-bucket
+    bucketId: 67f782d5806ea8223b29c5ab
+    primary: client_status
 acl:
   write: true==true
   read: true==true

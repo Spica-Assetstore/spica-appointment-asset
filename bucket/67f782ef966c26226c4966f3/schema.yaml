@@ -45,9 +45,7 @@ properties:
     relationType: onetomany
     dependent: false
     primary: client_status
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-appointment-bucket
+    bucketId: 67f782d5806ea8223b29c5ab
   services:
     type: relation
     title: services
@@ -57,9 +55,7 @@ properties:
     relationType: onetomany
     dependent: false
     primary: name
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-service-bucket
+    bucketId: 67f78317f2d5fa229c48a808
   working_hours:
     type: array
     title: working_hours
@@ -115,9 +111,7 @@ properties:
     relationType: onetoone
     dependent: false
     primary: name
-    bucket:
-      resourceFieldRef:
-        schemaName: spica-appointment-asset-branch-bucket
+    bucketId: 67f78347ec97c82316ab19c3
   average_rating:
     type: number
     title: average_rating
